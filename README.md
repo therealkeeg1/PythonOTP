@@ -31,13 +31,23 @@ This is writen in python 2.7 it will not work in python3!
 ```
 
 ### Examples
-#### All of the decryption exmaples wont work because you dont have the same private key as me unless you use your own data and private key.
+#### All of the decryption exmaples wont work because you dont have the same private key as me unless you use your own data and private key. By default the private key is saved as 'pad.key' and is created everytime the encryption mode is ran. It will overwrite itself, so create backups if you want to save the data.
+
+##### Detailed view
+To use the detailed view mode do -v or --view. This command will print out extra data that some users might find useful or intresting.
+```
+python OneTimePad.py -e -da "Wow this really works!" -v
+```
+Or
+```
+python OneTimePad.py -d -DD "5776 8453 ..." -v
+```
 
 ##### Basic encrypting
 ```
 python OneTimePad.py -e -da "Wow this really works!"
 ```
-The following data will be return to you
+The following data will be return to you.
 
 ```
 Generating random one time pad...
@@ -63,6 +73,14 @@ To save encrypted data to a file the user must use -do or --dataout then the des
 python OneTimePad.py -e -da "Wow this really works!" -do data.txt
 ```
 This will save the encrypted text to 'data.txt'
+
+
+##### Reading encrypted data from file
+To read encrypted data from a file the user must use -ef or --EnFile then the filename
+```
+python OneTimePad.py -d -ef data.txt
+```
+This will decrypt the encrypted text in 'data.txt'
 
 
 ##### Custom key filenames
