@@ -1,6 +1,6 @@
 # PythonOTP
 This is a simple OTP (One Time Pad) encryption program for encrypting/decrypting text.
-This is writen in python 2.7 it will not work in python3!
+This program is writen in python 2.7 it will not work in python3!
 
 ## Settings
 ```
