@@ -35,15 +35,15 @@ This is writen in python 2.7 it will not work in python3!
 
 ##### Basic encrypting
 ```
-python OneTimePad.py -e -da "Wow this really works does it?"
+python OneTimePad.py -e -da "Wow this really works!"
 ```
 The following data will be return to you
 
 ```
 Generating random one time pad...
-You entered "Wow this really works does it?", now encrypting this data with the generated key 
+You entered "Wow this really works!", now encrypting this data with the generated key 
 ----DATA BEGIN----
- 5776 8453 3968 4153 9209 1283 5971 9197 2862 9244 5444 9782 4153 1543 3350 3968 8780 8428 3079 9244 1283 9292 842 5035 2862 9244 4921 851 1283 6412 377 8297 8780 9244 842 8714 4153 1178 4035 9782 4153 4153 4821 5320 6551 2862 1817 842 5252 903 8593 4493
+ 1065 3926 5753 7617 4932 4609 3191 5488 3225 3244 4687 1467 7617 1342 8728 5753 8295 6214 1412 3244 4609 2010 3635 8338 3225 3244 764 7589 4609 7176 7613 1332 7928 7066 7928 1065 4787 1597 1597 525
 ----DATA END----
 ```
 
@@ -54,12 +54,21 @@ python OneTimePad.py -d -DD "5776 8453 ..."
 This will return
 ```
 Decrypting data...
-Decrypted data: Wow this really works does it?
+Decrypted data: Wow this really works!
 ```
+
+##### Save encrypted data to file
+To save encrypted data to a file the user must use -do or --dataout then the desired filename
+```
+python OneTimePad.py -e -da "Wow this really works!" -do data.txt
+```
+This will save the encrypted text to 'data.txt'
+
+
 ##### Custom key filenames
 To use a custom filename for the private key you must use -ko to define the filename
 ```
-python OneTimePad.py -e -da "Wow this really works does it?" -ko keypass.key
+python OneTimePad.py -e -da "Wow this really works!" -ko keypass.key
 ```
 This will save the decryption key to 'keypass.key'
 
