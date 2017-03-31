@@ -87,8 +87,10 @@ def Encrypt():
 		 	break
 
 	#Encrypt data typed in from user
-	print "You entered \"" + data + "\" now encrypting this data with generated key "
+	print "You entered \"" + data + "\", now encrypting this data with the generated key "
 	data = base64.b64encode(zlib.compress(data,9))
+	if args.view:
+		print "\nzlib compressed and base64 encoded data: " + str(data) + "\n"
 	EnData = ""
 	for x in data:
 		for i in usedKey:
@@ -180,18 +182,19 @@ def Decrypt():
 			if x[0] == y:
 				deData += x[1]
 	try:
+		if args.view:
+			print "\nzlib and base64 encoded data: " + str(deData) + "\n"
 		print "Decrypted data: " + zlib.decompress(base64.b64decode(deData))
 	except:
-		print "Error decrypting. Please make sure you are using the correct key"
+		print "Error decrypting. Please make sure you are using the correct key. The default key is pad.key"
 	
 
 if __name__ == "__main__":
     if args.encrypt and args.decrypt:
     	parser.error("You cant use both modes at the same time")
-    	quit()
-
-    if args.encrypt:
+    elif args.encrypt:
+    	print "PythonOTP created by Keegan Currie"
     	Encrypt()
-
-    if args.decrypt:
+    elif args.decrypt:
+    	print "PythonOTP created by Keegan Currie"
     	Decrypt()
