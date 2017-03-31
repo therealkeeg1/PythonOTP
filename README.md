@@ -31,7 +31,7 @@ This is writen in python 2.7 it will not work in python3!
 ```
 
 ### Examples
-#### All of the decryption exmaples wont work this is because you dont have the same private key as me.
+#### All of the decryption exmaples wont work because you dont have the same private key as me.
 
 Basic encrypting
 ```
