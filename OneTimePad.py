@@ -1,6 +1,16 @@
+######################################################
+#                       Made By                      #
+#                    Keegan Currie                   #
+######################################################
+#                      Created on                    #
+#                    March 30, 2017                  #        
+######################################################
+#                       Version                      #
+#                         3.0                        #
+######################################################
 import random, zlib, base64, argparse, re
 
-#Argmuent Crap
+#Argmuent Stuff
 parser = argparse.ArgumentParser()
 
 #Settings
@@ -16,9 +26,10 @@ parser.add_argument("-d","--decrypt", help="Decrypt mode", action="store_true")
 parser.add_argument("-kf","--keyfile", help="File with your key stored in it. If a file is not specified the default file name 'pad.key' will be used")
 parser.add_argument("-ef","--EnFile", help="File with your encrypted data. If a file is not specified you will be promoted an area to enter it")
 parser.add_argument("-DD","--encryptedData", help="Text you want to decrypt. Put data in quotes to avoid problems. If this argument is not used then you will be promoted an area to enter data")
-
 args = parser.parse_args()
 
+
+#Check arguments for desired settings
 if args.keyout:
     filename = args.keyout
 else:
@@ -40,9 +51,9 @@ else:
 
 
 def Encrypt():
+	#Character that are allowed to be encrypted
 	alpha = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()[]{}<>\"'?.,;:\\|/1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ_=+- "
 	waitUsed = list(alpha)
-	
 	
 	if not DataToEncrypt:
 		print "Enter text to encrypt"
