@@ -31,6 +31,7 @@ This is writen in python 2.7 it will not work in python3!
 ```
 
 ### Examples
+#### All of the decryption exmaples wont work this is because you dont have the same private key as me.
 
 Basic encrypting
 ```
@@ -56,6 +57,16 @@ Decrypting data...
 Decrypted data: Wow this really works does it?
 ```
 
+Output Key to user defined filename
+```
+python OneTimePad.py -e -da "Wow this really works does it?" -ko keypass.key
+```
+This will save the decryption key to 'keypass.key'
+
+To use a custom key filename to decrypt you have to use -kf or --keyfile
+```
+python OneTimePad.py -d -DD "5776 8453 ..." -kf keypass.key
+```
 
 
 
