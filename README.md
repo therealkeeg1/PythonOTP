@@ -10,4 +10,4 @@ Give the example
 
 ## Authors
 
-* **Keegan Currie** - *Initial work* - [Keegan Currie](https://github.com/therealkeeg1)
+* **Keegan Currie** - [My Profile](https://github.com/therealkeeg1)
