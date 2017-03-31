@@ -9,7 +9,7 @@ Basic encrypting
 ```
 python OneTimePad.py -e -da "Wow this really works does it?"
 ```
-The following data will be return to you
+####The following data will be return to you
 
 ```
 Generating random one time pad...
