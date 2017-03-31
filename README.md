@@ -57,7 +57,7 @@ Decrypting data...
 Decrypted data: Wow this really works does it?
 ```
 
-Output Key to user defined filename
+To use a custom filename for the private key you must use -ko to define the filename
 ```
 python OneTimePad.py -e -da "Wow this really works does it?" -ko keypass.key
 ```
