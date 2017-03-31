@@ -33,7 +33,7 @@ This is writen in python 2.7 it will not work in python3!
 ### Examples
 #### All of the decryption exmaples wont work because you dont have the same private key as me.
 
-Basic encrypting
+##### Basic encrypting
 ```
 python OneTimePad.py -e -da "Wow this really works does it?"
 ```
@@ -47,7 +47,7 @@ You entered "Wow this really works does it?", now encrypting this data with the 
 ----DATA END----
 ```
 
-Basic decrypting
+###### Basic decrypting
 ```
 python OneTimePad.py -d -DD "5776 8453 3968 4153 9209 1283 5971 9197 2862 9244 5444 9782 4153 1543 3350 3968 8780 8428 3079 9244 1283 9292 842 5035 2862 9244 4921 851 1283 6412 377 8297 8780 9244 842 8714 4153 1178 4035 9782 4153 4153 4821 5320 6551 2862 1817 842 5252 903 8593 4493"
 ```
@@ -56,7 +56,7 @@ This will return
 Decrypting data...
 Decrypted data: Wow this really works does it?
 ```
-
+##### Custom key filenames
 To use a custom filename for the private key you must use -ko to define the filename
 ```
 python OneTimePad.py -e -da "Wow this really works does it?" -ko keypass.key
